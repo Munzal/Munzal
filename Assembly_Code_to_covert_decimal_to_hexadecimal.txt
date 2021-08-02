@@ -1,0 +1,146 @@
+/*
+Basic pay in the range 20,000 to 40,000
+DA is 30%
+HRA 12%
+Medical allowance is 5%
+Pension scheme 10%
+Insurance 5%
+Recreation club 2%
+Input should be Basic pay
+Output should be the remaining
+Question: Write a code to take the required input and print the required output
+*/
+
+ MOV DI,1500
+ MOV SI,1307
+ MOV AX,[SI]
+ MOV CX,001E
+ MUL CX
+ MOV [DI],AX
+ MOV SI,1309
+ MOV AH,00
+ MOV AL,[SI]
+ MUL CX
+ ADD AX,[DI]
+ MOV [DI],AX
+
+ MOV DI,1502
+ MOV SI,1307
+ MOV AX,[SI]
+ MOV CX,000C
+ MUL CX
+ MOV [DI],AX
+ MOV SI,1309
+ MOV AH,00
+ MOV AL,[SI]
+ MUL CX
+ ADD AX,[DI]
+ MOV [DI],AX
+
+ MOV DI,1504
+ MOV SI,1307
+ MOV AX,[SI]
+ MOV CX,0005
+ MUL CX
+ MOV [DI],AX
+ MOV SI,1309
+ MOV AH,00
+ MOV AL,[SI]
+ MUL CX
+ ADD AX,[DI]
+ MOV [DI],AX
+
+ MOV DI,1506
+ MOV SI,1307
+ MOV AX,[SI]
+ MOV CX,000A
+ MUL CX
+ MOV [DI],AX
+ MOV SI,1309
+ MOV AH,00
+ MOV AL,[SI]
+ MUL CX
+ ADD AX,[DI]
+ MOV [DI],AX
+
+ MOV DI,1508
+ MOV SI,1307
+ MOV AX,[SI]
+ MOV CX,0005
+ MUL CX
+ MOV [DI],AX
+ MOV SI,1309
+ MOV AH,00
+ MOV AL,[SI]
+ MUL CX
+ ADD AX,[DI]
+ MOV [DI],AX
+
+ MOV DI,150A
+ MOV SI,1307
+ MOV AX,[SI]
+ MOV CX,0002
+ MUL CX
+ MOV [DI],AX
+ MOV SI,1309
+ MOV AH,00
+ MOV AL,[SI]
+ MUL CX
+ ADD AX,[DI]
+ MOV [DI],AX
+
+
+
+
+
+MOV DI,1300
+MOV SI,1200
+MOV AH,00
+MOV AL,[SI]
+MOV BH,00
+MOV BL,10
+DIV BX
+MOV CX,DX
+MOV BX,000A
+MUL BX
+ADD AX,CX
+MOV [DI],AX
+INC SI
+MOV AH,00
+MOV AL,[SI]
+MOV BH,00
+MOV BL,10
+DIV BX
+MOV CX,DX
+MOV BX,000A
+MUL BX
+ADD AX,CX
+MOV BX,64
+MUL AX,BX
+INC DI
+MOV [DI],AX
+INC DI
+MOV [DI],DX
+INC SI
+MOV AH,00
+MOV AL,[SI]
+MOV BH,27
+MOV BL,10
+MOV AX,BX
+INC DI
+MOV [DI], AX
+INC DI
+MOV [DI],DX
+MOV DI,1303
+MOV AX,[DI]
+MOV DI,1301
+MOV BX,[DI]
+ADD AX,BX
+MOV DI,1300
+MOV BH,00
+MOV BL,[DI]
+ADD AX,BX
+MOV DI,1305
+MOV [DI],AX
+
+
